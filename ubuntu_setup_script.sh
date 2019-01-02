@@ -9,20 +9,6 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 # set zsh as default shell
 chsh -s $(which zsh)
 
-# add windows repository shortcut and set is as default path when opening terminal
-echo \
-"
-# wr evaluates to the absolute path to your Windows user's root.
-export wr=/mnt/c/Users/farid/Documents
-
-# This gives us a quick way of moving directly to the Windows root
-alias cdwr='cd \$wr'
-
-# This brings you to your Windows Working directory immediatly when you open a new terminal.
-cdwr
-" >> ~/.zshrc
-source ~/.zshrc
-
 # install node.JS
 curl -sL https://deb.nodesource.com/setup_11.x | sudo -E bash -
 sudo apt-get install -y nodejs
@@ -40,13 +26,6 @@ echo \
 export PATH=~/anaconda3/bin:\$PATH
 " >> ~/.zshrc
 source ~/.zshrc
-
-# add chrome as a default browser
-echo \
-"
-# Set Default Browser
-BROWSER=/mnt/c/Program\ Files\ \(x86\)/Google/Chrome/Application/chrome.exe
-">> ~/.zshrc
 
 # install postgresql
 sudo apt-get install -y postgresql
@@ -92,13 +71,14 @@ conda update -n base -c defaults conda
 # Configure WSL to Connect to Docker for Windows
 echo "export DOCKER_HOST=tcp://localhost:2375" >> ~/.zshrc && source ~/.zshrc
 
-sudo echo \
+# make c drive accesible to docker (your windows directory will be moved from /mnt/c into /c)
+sudo bash -c 'echo \
 "[automount]
 root = /
 options = \"metadata\"
-" >> /etc/wsl.conf
+" >> /etc/wsl.conf'
 
-# TODO: Install kubernetes
+# Install kubernetes
 curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add - 
 echo "deb http://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee -a /etc/apt/sources.list.d/kubernetes.list
 sudo apt-get update
@@ -108,5 +88,27 @@ sudo apt-get install -y kubectl
 mkdir ~/.kube
 ln -s /c/Users/farid/.kube/config ~/.kube/config
 
+# add windows repository shortcut and set is as default path when opening terminal
+echo \
+"
+# wr evaluates to the absolute path to your Windows user's root.
+export wr=/c/Users/farid/Documents
+
+# This gives us a quick way of moving directly to the Windows root
+alias cdwr='cd \$wr'
+
+# This brings you to your Windows Working directory immediatly when you open a new terminal.
+cdwr
+" >> ~/.zshrc
+
+# add chrome as a default browser
+echo \
+"
+# Set Default Browser
+BROWSER=/c/Program\ Files\ \(x86\)/Google/Chrome/Application/chrome.exe
+">> ~/.zshrc
+
 # remove downloaded package installer
 sudo apt autoremove -y
+
+echo "Restart your computer to avoid any error with docker"
