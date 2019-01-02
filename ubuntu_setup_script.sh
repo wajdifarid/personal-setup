@@ -108,6 +108,11 @@ echo \
 BROWSER=/c/Program\ Files\ \(x86\)/Google/Chrome/Application/chrome.exe
 ">> ~/.zshrc
 
+# or add the code below to your jupyter notebook config (generate it using jupyter notebook --generate-config)
+# import webbrowser
+# webbrowser.register('chrome', None, webbrowser.GenericBrowser('C:\Program Files (x86)\Google\Chrome\Application\chrome.exe'))
+# c.NotebookApp.browser = 'chrome'
+
 # remove downloaded package installer
 sudo apt autoremove -y
 
