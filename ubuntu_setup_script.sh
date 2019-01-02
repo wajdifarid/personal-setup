@@ -16,7 +16,7 @@ echo \
 export wr=/mnt/c/Users/farid/Documents
 
 # This gives us a quick way of moving directly to the Windows root
-alias cdwr='cd $wr'
+alias cdwr='cd \$wr'
 
 # This brings you to your Windows Working directory immediatly when you open a new terminal.
 cdwr
@@ -37,7 +37,7 @@ rm Anaconda3-5.3.1-Linux-x86_64.sh
 echo \
 "
 # Add anaconda path
-export PATH=~/anaconda3/bin:$PATH
+export PATH=~/anaconda3/bin:\$PATH
 " >> ~/.zshrc
 source ~/.zshrc
 
