@@ -92,11 +92,11 @@ conda update -n base -c defaults conda
 # Configure WSL to Connect to Docker for Windows
 echo "export DOCKER_HOST=tcp://localhost:2375" >> ~/.zshrc && source ~/.zshrc
 
-sudo echo \
+sudo bash -c 'echo \
 "[automount]
 root = /
 options = \"metadata\"
-" >> /etc/wsl.conf
+" >> /etc/wsl.conf'
 
 # TODO: Install kubernetes
 curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add - 
