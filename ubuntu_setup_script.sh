@@ -13,20 +13,6 @@ chsh -s $(which zsh)
 curl -sL https://deb.nodesource.com/setup_11.x | sudo -E bash -
 sudo apt-get install -y nodejs
 
-# install anaconda and all DS Environment
-wget https://repo.anaconda.com/archive/Anaconda3-5.3.1-Linux-x86_64.sh
-chmod +x Anaconda3-5.3.1-Linux-x86_64.sh
-./Anaconda3-5.3.1-Linux-x86_64.sh
-rm Anaconda3-5.3.1-Linux-x86_64.sh
-
-# Add anaconda path
-echo \
-"
-# Add anaconda path
-export PATH=~/anaconda3/bin:\$PATH
-" >> ~/.zshrc
-source ~/.zshrc
-
 # install postgresql
 sudo apt-get install -y postgresql
 
@@ -63,10 +49,7 @@ sudo apt-get install -y docker-ce
 sudo usermod -aG docker $USER
 
 # Install Docker Compose into your user's home directory.
-conda install -c conda-forge docker-compose 
-
-# update conda
-conda update -n base -c defaults conda
+pip install docker-compose --user
 
 # Configure WSL to Connect to Docker for Windows
 echo "export DOCKER_HOST=tcp://localhost:2375" >> ~/.zshrc && source ~/.zshrc
@@ -100,18 +83,6 @@ alias cdwr='cd \$wr'
 # This brings you to your Windows Working directory immediatly when you open a new terminal.
 cdwr
 " >> ~/.zshrc
-
-# add chrome as a default browser
-echo \
-"
-# Set Default Browser
-BROWSER=/c/Program\ Files\ \(x86\)/Google/Chrome/Application/chrome.exe
-">> ~/.zshrc
-
-# or add the code below to your jupyter notebook config (generate it using jupyter notebook --generate-config)
-# import webbrowser
-# webbrowser.register('chrome', None, webbrowser.GenericBrowser('C:\Program Files (x86)\Google\Chrome\Application\chrome.exe'))
-# c.NotebookApp.browser = 'chrome'
 
 # remove downloaded package installer
 sudo apt autoremove -y
