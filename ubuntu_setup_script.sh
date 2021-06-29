@@ -16,6 +16,9 @@ sudo apt-get install -y nodejs
 # install postgresql
 sudo apt-get install -y postgresql
 
+# install mysql
+sudo apt install mysql-server
+
 # add windows repository shortcut and set is as default path when opening terminal
 echo \
 "
