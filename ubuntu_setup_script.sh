@@ -31,5 +31,3 @@ cdwr
 
 # remove downloaded package installer
 sudo apt autoremove -y
-
-echo "Restart your computer to avoid any error with docker"
