@@ -8,13 +8,13 @@ sudo apt-get install -y zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" <<< "Y"
 
 # install postgresql
-sudo apt install postgresql postgresql-contrib
+sudo apt install -y postgresql postgresql-contrib
 
 # install mysql
-sudo apt install mysql-server
+sudo apt install -y mysql-server
 
 # install redis
-sudo apt install redis-server
+sudo apt install -y redis-server
 
 # add windows repository shortcut and set is as default path when opening terminal
 echo \
