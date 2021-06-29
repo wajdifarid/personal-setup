@@ -4,8 +4,11 @@ sudo apt-get upgrade -y
 
 # install zsh
 sudo apt-get install -y zsh
-# install oh-my-zsh and set zsh as default shell
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" <<< "Y"
+# install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+
+# set zsh as default shell
+chsh -s $(which zsh)
 
 # install postgresql
 sudo apt install -y postgresql postgresql-contrib
