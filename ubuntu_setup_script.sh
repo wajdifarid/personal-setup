@@ -19,6 +19,9 @@ sudo apt install postgresql postgresql-contrib
 # install mysql
 sudo apt install mysql-server
 
+# install redis
+sudo apt install redis-server
+
 # add windows repository shortcut and set is as default path when opening terminal
 echo \
 "
