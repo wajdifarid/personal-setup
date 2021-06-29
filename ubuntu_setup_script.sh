@@ -4,7 +4,7 @@ sudo apt-get upgrade -y
 
 # install zsh and oh-my-zsh
 sudo apt-get install -y zsh
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" <<< "Y"
 
 # set zsh as default shell
 chsh -s $(which zsh)
