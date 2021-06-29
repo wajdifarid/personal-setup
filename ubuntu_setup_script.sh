@@ -14,7 +14,7 @@ curl -sL https://deb.nodesource.com/setup_11.x | sudo -E bash -
 sudo apt-get install -y nodejs
 
 # install postgresql
-sudo apt-get install -y postgresql
+sudo apt install postgresql postgresql-contrib
 
 # install mysql
 sudo apt install mysql-server
