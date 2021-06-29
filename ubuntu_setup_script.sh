@@ -16,6 +16,13 @@ sudo apt install -y mysql-server
 # install redis
 sudo apt install -y redis-server
 
+
+# install go
+sudo rm -rf /usr/local/go
+curl -L https://golang.org/dl/go1.16.5.linux-amd64.tar.gz --output /tmp/go1.16.5.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf /tmp/go1.16.5.linux-amd64.tar.gz
+echo "export PATH=\$PATH:/usr/local/go/bin" >> ~/.zshrc
+
 # add windows repository shortcut and set is as default path when opening terminal
 echo \
 "
