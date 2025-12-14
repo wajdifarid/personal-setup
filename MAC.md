@@ -8,7 +8,7 @@
 - Screen Capture: [Shottr](https://shottr.cc/)
 - Window Manager: [Rectangle](https://rectangleapp.com/)
 - Quick Notes: [Tot](https://tot.rocks/)
-- Full Notes: [Notion](https://www.notion.com/desktop) 
+- Full Notes: [Notion](https://www.notion.com/desktop) / [Obsidian](https://obsidian.md/download)
 - API Client: [Bruno](https://www.usebruno.com/downloads), [Postman](https://www.postman.com/downloads/), [Insomnia](https://insomnia.rest/download) 
 - Screen Recorder: [Loom](https://www.loom.com/download)
 - Password Manager: [1Password](https://1password.com/downloads/mac)
