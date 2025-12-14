@@ -1,6 +1,6 @@
 - Clipboard Manager: [Raycast](https://www.raycast.com/)
 - Quick AI launcher: [ChatGPT](https://openai.com/chatgpt/download/)
-- Database Client: [DBeaver](https://dbeaver.io/download/)
+- Database Client: [DBeaver](https://dbeaver.io/download/) / [Beekeeper]()
 - Browser: [Arc](https://arc.net/download)
 - Internet Speed Check: [Speedtest](https://www.speedtest.net/apps/mac)
 - Code Editor: [Cursor](https://cursor.com/downloads)
